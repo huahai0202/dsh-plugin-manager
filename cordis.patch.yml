@@ -1,0 +1,7 @@
+# dsh-plugin-manager bundle layer: inserts the plugin row.
+# Installed through the official channel:
+#   dsh plugin --profile <name> add dsh-plugin-manager
+# The `name` is the package entry; the Loader resolves it from profile node_modules.
+- insert:
+    - id: plugin-manager
+      name: 'dsh-plugin-manager'
