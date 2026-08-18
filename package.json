@@ -1,7 +1,7 @@
 {
   "name": "dsh-plugin-manager",
   "description": "Manage user-installed DeepSeek Harness plugins from the DSH Web settings page",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -29,6 +29,9 @@
   },
   "engines": {
     "node": ">=22.19"
+  },
+  "scripts": {
+    "test": "node --test"
   },
   "files": [
     "lib",
