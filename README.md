@@ -22,13 +22,15 @@
 
 ## 安装
 
-需要 Node.js 22.19+ 和 pnpm。
+需要 dsh 0.1.5-alpha.1+、Node.js 22.19+ 和 pnpm。
 
 ```sh
 dsh plugin --profile web add github:huahai0202/dsh-plugin-manager
 ```
 
 安装完成后重启 `dsh web`，然后在「设置 → 插件管理」中使用。
+
+> 0.4.0 起适配 dsh 0.1.5-alpha.1：客户端模块系统改为 `dsh-client-modules`（旧版 `dsh-client-runtime` 已移除），`dsh-client-ui-slots` 由 Web 外壳内置提供。旧版 dsh 请使用 0.3.x。
 
 ## 使用说明
 
@@ -72,6 +74,7 @@ dsh-plugin-manager/
 │   └── screenshot.png     # README 截图
 ├── lib/
 │   ├── index.js           # DSH Host API 与 pnpm 操作
+│   ├── pnpm.js            # pnpm 子进程封装（超时 / 进程树终止）
 │   └── client.js          # 设置页面 UI
 ├── cordis.patch.yml       # Host 挂载配置
 ├── package.json           # 插件声明
